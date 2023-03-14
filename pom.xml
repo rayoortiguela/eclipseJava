@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<!--  
+		REVISION Y ACTUALIZACION DEL CODIGO FUENTE
+		** DICIEMBRE 2022 ** 
+		SE EJECUTO, SE ACTUALIZO Y ADEMAS SE VERIFICO QUE TODO EL CÓDIGO FUENTE FUNCIONARA Y FUERA COMPATIBLE CON LAS ULTIMAS 
+		VERSIONES DE SOFTWARE ESTABLES: 
+		
+			SPRING BOOT 3.0.0
+			MYSQL 8.0
+			JAVA 17 LTS (Long Term Support - Soporte a Largo plazo)
+			UBUNTU SERVER 22.04 LTS (Long Term Support - Soporte a Largo plazo)   
+	-->
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.0.0</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	
+	<groupId>net.itinajero</groupId>
+	<artifactId>empleos</artifactId>
+	<version>0.0.15-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>empleos</name>
+	<description>Aplicacion para publicar ofertas de trabajo</description>
+
+	<properties>		
+		<java.version>17</java.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>	
+		<!-- Requerido para trabajar con Spring Data JPA -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.mysql</groupId>
+			<artifactId>mysql-connector-j</artifactId>
+			<scope>runtime</scope>
+		</dependency>		
+		<!-- Add support form automatic reloading -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>			
+		</dependency>			
+		<!-- Requerido para trabajar Thymeleaf Spring Security Tags -->		
+		<dependency>
+			<groupId>org.thymeleaf.extras</groupId>
+			<artifactId>thymeleaf-extras-springsecurity6</artifactId>
+		</dependency>				
+		<!-- Requerido para trabajar Spring Security -->
+		<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>	        
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+	
+</project>
